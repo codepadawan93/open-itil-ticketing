@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "APPNAME": "Open ITIL Ticketing",
+    "HTTP_SERVER": "",
+    "UID": "581e9dcc45daf0c619d68de151b73dcf",
+    "APP_PATH": "/open-itil-ticketing-api/"
+  },
+  "database": {
+    "driver": "mysql",
+    "name": "",
+    "host": "",
+    "user": "",
+    "password": "",
+    "prefix": ""
+  },
+  "mail": {}
+}

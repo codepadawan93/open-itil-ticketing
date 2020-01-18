@@ -1,0 +1,17 @@
+{
+
+    "files":[
+        "Library/XmlEncoder.php",
+        "Library/Utils.php",
+        "Core/Config.php",
+        "Core/Dbdriver.php",
+        "Core/Model.php",
+        "Core/Request.php",
+        "Core/Response.php",
+        "Core/Controller.php",
+        "Core/Route.php",
+        "Core/Router.php",
+        "Routes.php"
+    ]
+
+}
