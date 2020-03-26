@@ -4,6 +4,7 @@ use Core\Router;
 
 Router::default('home');
 Router::get('home');
-Router::get('home/getMessage');
-
-Router::get('test');
+Router::get('change');
+Router::get('incident');
+Router::get('problem');
+Router::get('request');

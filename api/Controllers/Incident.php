@@ -2,11 +2,11 @@
 
 use Core\Controller;
 
-class Home extends Controller {
+class Incident extends Controller {
     public function index() {
         $this->response->setEncoding("JSON");
         $this->response->send( [
-            "Title" => "test"
+            "Title" => "Incident"
         ] );
     }
 }

@@ -82,23 +82,23 @@ class DB {
 
         $this->DB_DSN  = sprintf(
             "%s:dbname=%s;host=%s",
-            $config['database']['driver'],
-            $config['database']['name'],
-            $config['database']['host']
+            $config->database->driver,
+            $config->database->name,
+            $config->database->host
         );
 
-        $this->DB_USER = $config['database']['user'];
-        $this->DB_PASS = $config['database']['password'];
-        $this->prefix  = $config['database']['prefix'];
-
-        try{
-
-            $this->PDO = new PDO($this->DB_DSN, $this->DB_USER, $this->DB_PASS);
-
-        } catch(Exception $e){
-
-            throw new Exception($e->getMessage());
-
+        $this->DB_USER = $config->database->user;
+        $this->DB_PASS = $config->database->password;
+        $this->prefix  = $config->database->prefix;
+        
+        if($config->database->enable){
+            try{
+                $this->PDO = new PDO($this->DB_DSN, $this->DB_USER, $this->DB_PASS);
+            } catch(Exception $e){
+                throw new Exception($e->getMessage());
+            }
+        } else {
+            $this->PDO = null;
         }
     }
 

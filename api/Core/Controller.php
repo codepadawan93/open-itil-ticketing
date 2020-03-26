@@ -104,7 +104,6 @@ class Controller {
     */
     public function dispatch(){
         $match  = $this->router->resolve($this->request);
-
         if($match) {
             call_user_func_array(array(new $match->class, $match->method), $match->params);
         }else{

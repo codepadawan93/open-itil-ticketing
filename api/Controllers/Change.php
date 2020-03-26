@@ -2,11 +2,13 @@
 
 use Core\Controller;
 
-class Home extends Controller {
+class Change extends Controller {
     public function index() {
+        $change = new Models\Change();
+        print_r($change);
         $this->response->setEncoding("JSON");
         $this->response->send( [
-            "Title" => "test"
+            "Title" => "Change"
         ] );
     }
 }
