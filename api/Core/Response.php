@@ -38,7 +38,7 @@ class Response {
      * @type string
      *
      */
-    private $encoding = "JSON";
+    private $encoding = Encoding::JSON;
 
     /*
     *   Setter for HTTP status code
@@ -77,11 +77,11 @@ class Response {
     public function setEncoding($encoding){
 
         /* This is terrible, should refactor */
-        if($encoding === "JSON" && !in_array( "Content-Type: text/json; charset=utf-8", $this->headers ) ){
+        if($encoding === Encoding::JSON && !in_array( "Content-Type: text/json; charset=utf-8", $this->headers ) ){
 
             $this->addHeader("Content-Type: text/json; charset=utf-8");
 
-        }elseif($encoding === "XML" && !in_array( "Content-Type: text/xml; charset=utf-8", $this->headers ) ){
+        }elseif($encoding === Encoding::XML && !in_array( "Content-Type: text/xml; charset=utf-8", $this->headers ) ){
 
             $this->addHeader("Content-Type: text/xml; charset=utf-8");
 
@@ -104,7 +104,7 @@ class Response {
     public function send($data){
 
         $output = null;
-        if($this->encoding === "JSON"){
+        if($this->encoding === Encoding::JSON){
 
             $this->addHeader("Content-Type: text/json; charset=utf-8");
 
@@ -119,7 +119,7 @@ class Response {
                 ]);
             }
 
-        }elseif($this->encoding === "XML"){
+        }elseif($this->encoding === Encoding::XML){
 
             $this->addHeader("Content-Type: text/xml; charset=utf-8");
 

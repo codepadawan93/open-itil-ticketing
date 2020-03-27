@@ -6,7 +6,6 @@ use Core\Config;
 use Core\Request;
 use Core\Response;
 
-
 /**
  *
  *  Class Controller for processing a request and returning a response

@@ -2,5 +2,5 @@
 
 namespace Models;
 
-class Change extends \Core\Model {
+class Change extends Task {
 }

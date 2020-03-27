@@ -12,6 +12,8 @@ use Core\DB as DB;
  */ 
 class Model {
 
+    private $table;
+
     /*
     *
     *  Database object
@@ -34,11 +36,25 @@ class Model {
         $this->DB = DB::getInstance();
     
     }
+    
+    public function createOne($specs){
+    }
+
+    public function getOne($id){
+    }
+    
+    public function getAll(){
+    }
+
+    public function updateOne($id){
+    }
+
+    public function deleteOne($id){
+    }
+
+    public function deleteAll(){
+    }
 
 }
-
-
-
-
 
 ?>

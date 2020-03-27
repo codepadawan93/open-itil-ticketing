@@ -6,11 +6,14 @@
         "Core/Config.php",
         "Core/Dbdriver.php",
         "Core/Model.php",
+        "Core/Encoding.php",
         "Core/Request.php",
         "Core/Response.php",
         "Core/Controller.php",
         "Core/Route.php",
         "Core/Router.php",
+        "Core/Error.php",
+        "Models/Task.php",
         "Routes.php"
     ]
 
